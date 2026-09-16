@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <AccountQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK" iteratorRemainingCount="0">
+      <AccountRet>
+        <ListID>80000001-1</ListID>
+        <Name>Checking</Name>
+        <FullName>Checking</FullName>
+        <IsActive>true</IsActive>
+        <Sublevel>0</Sublevel>
+        <AccountType>Bank</AccountType>
+        <AccountNumber>1000</AccountNumber>
+        <Balance>2500.00</Balance>
+        <TotalBalance>2500.00</TotalBalance>
+      </AccountRet>
+      <AccountRet>
+        <ListID>80000002-1</ListID>
+        <Name>Sales</Name>
+        <FullName>Income:Sales</FullName>
+        <IsActive>true</IsActive>
+        <Sublevel>1</Sublevel>
+        <AccountType>Income</AccountType>
+        <ParentRef>
+          <ListID>80000003-1</ListID>
+          <FullName>Income</FullName>
+        </ParentRef>
+        <Balance>-100.00</Balance>
+      </AccountRet>
+    </AccountQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

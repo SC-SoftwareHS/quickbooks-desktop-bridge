@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <CompanyQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <CompanyRet>
+        <IsSampleCompany>false</IsSampleCompany>
+        <CompanyName>Acme Holdings</CompanyName>
+        <LegalCompanyName>Acme Holdings, Inc.</LegalCompanyName>
+        <Address>
+          <Addr1>123 Main St</Addr1>
+          <City>Austin</City>
+          <State>TX</State>
+          <PostalCode>78701</PostalCode>
+          <Country>US</Country>
+        </Address>
+        <Phone>512-555-0100</Phone>
+        <Email>books@example.com</Email>
+        <FirstMonthFiscalYear>January</FirstMonthFiscalYear>
+        <EIN>12-3456789</EIN>
+      </CompanyRet>
+    </CompanyQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>

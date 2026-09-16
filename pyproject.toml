@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qbctl"
+version = "0.1.0"
+description = "QuickBooks Desktop bridge (qbXML / QBXMLRP2) with an HTTP API and a bank-import pipeline"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Harrison Stoneham" }]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["quickbooks", "qbxml", "qbxmlrp2", "accounting", "bookkeeping"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/SC-SoftwareHS/quickbooks-desktop-bridge"
+Repository = "https://github.com/SC-SoftwareHS/quickbooks-desktop-bridge"
+Issues = "https://github.com/SC-SoftwareHS/quickbooks-desktop-bridge/issues"
+
+[project.optional-dependencies]
+windows = ["pywin32>=306"]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.27"]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+qbctl = "quickbooks.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+quickbooks = ["com_bridge.ps1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

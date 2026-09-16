@@ -1,0 +1,28 @@
+# Pipeline configuration for scripts/build_upload.py.
+#
+# Copy to config.toml and edit to match your own chart of accounts and
+# institutions. config.toml is gitignored — it describes your books, not the
+# tool. Account names must match QuickBooks' chart of accounts EXACTLY,
+# including punctuation (a curly vs straight apostrophe is a different account).
+
+[accounts]
+# Brokerage/settlement cash account that the broker export posts against.
+brokerage_cash = "Broker - Cash"
+# Operating checking account that receives transfers from the brokerage.
+operating_checking = "Operating Checking xx0000"
+interest_income = "Interest Income"
+# Income account for recognized incoming client wires.
+client_income = "Consulting Income"
+
+[cards]
+# Source-account names in the bank export that are credit cards rather than
+# bank accounts. These map to CreditCardCharge / CreditCardCredit instead of
+# Check / Deposit.
+card_accounts = ["Operating Credit"]
+
+[wires]
+# A recurring incoming client wire of exactly this amount books straight to
+# client_income. Any other incoming wire is flagged status=review so a human
+# can confirm it isn't a loan or a capital contribution. Set to "" to review
+# every incoming wire.
+recognized_amount = ""

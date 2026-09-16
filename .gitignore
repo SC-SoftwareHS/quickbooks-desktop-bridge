@@ -1,0 +1,40 @@
+# --- Real financial data. Never commit. -------------------------------------
+# These directories are the working set of an actual set of books: bank and
+# payroll exports, the QuickBooks snapshot they dedup against, the staging
+# file under review, and the append-only log of what was posted.
+InstitutionData/**
+exports/**
+imports/**
+staging/**
+# ...but keep the directory skeleton so the expected layout is visible.
+!**/
+!**/.gitkeep
+
+# Local chart-of-accounts config (see config.example.toml)
+config.toml
+
+# --- Secrets ----------------------------------------------------------------
+.env
+logs/
+*.token
+
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.venv-*/
+venv/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# --- qbXML scratch (fixtures are kept) --------------------------------------
+*.xml
+!tests/fixtures/*.xml
+
+# --- OS junk ----------------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db

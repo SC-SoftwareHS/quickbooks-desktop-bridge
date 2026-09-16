@@ -1,0 +1,11 @@
+# Convenience pin-free install. Prefer `pip install -e ".[api]"` — these mirror
+# the optional-dependency groups in pyproject.toml.
+
+# Optional HTTP API (Windows host only)
+fastapi>=0.110
+uvicorn[standard]>=0.27
+
+# Optional in-process COM. Only usable from 32-bit x86 Python; on ordinary
+# 64-bit Python qbctl uses the 32-bit PowerShell bridge instead and this is
+# not needed.
+# pywin32>=306

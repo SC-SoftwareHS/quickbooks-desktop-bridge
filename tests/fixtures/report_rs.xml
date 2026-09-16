@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<QBXML>
+  <QBXMLMsgsRs>
+    <GeneralSummaryReportQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+      <ReportRet>
+        <ReportTitle>Trial Balance</ReportTitle>
+        <ReportSubtitle>As of December 31, 2026</ReportSubtitle>
+        <ReportBasis>Accrual</ReportBasis>
+        <NumRows>2</NumRows>
+        <NumColumns>3</NumColumns>
+        <ColDesc colID="1" dataType="STRTYPE">
+          <ColTitle titleRow="1" value="Account"/>
+          <ColType>Account</ColType>
+        </ColDesc>
+        <ColDesc colID="2" dataType="AMTTYPE">
+          <ColTitle titleRow="1" value="Debit"/>
+          <ColType>Amount</ColType>
+        </ColDesc>
+        <ColDesc colID="3" dataType="AMTTYPE">
+          <ColTitle titleRow="1" value="Credit"/>
+          <ColType>Amount</ColType>
+        </ColDesc>
+        <ReportData>
+          <DataRow>
+            <RowData rowType="account" value="Checking"/>
+            <ColData colID="1" value="Checking"/>
+            <ColData colID="2" value="2500.00"/>
+            <ColData colID="3" value=""/>
+          </DataRow>
+          <TotalRow>
+            <RowData rowType="text" value="TOTAL"/>
+            <ColData colID="1" value="TOTAL"/>
+            <ColData colID="2" value="2500.00"/>
+            <ColData colID="3" value="2500.00"/>
+          </TotalRow>
+        </ReportData>
+      </ReportRet>
+    </GeneralSummaryReportQueryRs>
+  </QBXMLMsgsRs>
+</QBXML>
