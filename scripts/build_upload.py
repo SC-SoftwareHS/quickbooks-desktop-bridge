@@ -82,7 +82,10 @@ def load_rules() -> list[tuple[str, str]]:
 def match_rule(rules: list[tuple[str, str]], payee: str) -> str | None:
     p = payee.strip().lower()
     for needle, account in rules:
-        if needle == p or needle in p or p in needle:
+        # Only exact, or the rule appearing inside the payee. Matching the other
+        # way round let a short payee ("Google") hit a longer, unrelated rule
+        # ("Google Play") and book Google Ads to Dues and Subscriptions.
+        if needle == p or needle in p:
             return account
     return None
 

@@ -13,6 +13,9 @@ staging/**
 # Local chart-of-accounts config (see config.example.toml)
 config.toml
 
+# Posting rules written against the real books (amounts, payees, accounts).
+private/
+
 # --- Secrets ----------------------------------------------------------------
 .env
 logs/
